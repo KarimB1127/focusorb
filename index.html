@@ -16,7 +16,7 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
+      <!-- 1. Hero Section -->
       <section aria-labelledby="hero-title">
         <h1 id="hero-title">Focus & alignment for high-velocity teams</h1>
         <p>
@@ -27,7 +27,7 @@
         <a href="#waitlist">Get early access</a>
       </section>
 
-      <!-- Features Section -->
+      <!-- 2. Features Section -->
       <section aria-labelledby="features-title">
         <h2 id="features-title">Designed for deep work</h2>
 
@@ -50,12 +50,12 @@
           <h3>Weekly Report</h3>
           <p>
             Automate progress summaries for leadership and board updates
-            effortlessy.
+            effortlessly.
           </p>
         </article>
       </section>
 
-      <!-- Testimonials Section -->
+      <!-- 3. Testimonials Section -->
       <section aria-labelledby="voices-title">
         <h2 id="voices-title">What early users say</h2>
 
@@ -84,7 +84,7 @@
         </blockquote>
       </section>
 
-      <!-- Pricing Section -->
+      <!-- 4. Pricing Section -->
       <section aria-labelledby="pricing-title">
         <h2 id="pricing-title">Simple pricing</h2>
 
@@ -100,6 +100,74 @@
             automated weekly reports.
           </dd>
         </dl>
+      </section>
+
+      <!-- 5. Waitlist Section (Form) -->
+      <section id="waitlist" aria-labelledby="waitlist-title">
+        <h2 id="waitlist-title">Join the beta waitlist</h2>
+
+        <form>
+          <fieldset>
+            <legend>Your details</legend>
+
+            <div>
+              <label for="fullname">Full name</label>
+              <input
+                id="fullname"
+                type="text"
+                name="fullname"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="email">Work email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="role">Your role</label>
+              <select id="role" name="role" required>
+                <option value="">Select a role</option>
+                <option value="founder">Founder</option>
+                <option value="operator">Operator</option>
+                <option value="engineer">Engineer</option>
+                <option value="designer">Designer</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="team-info">Tell us about your team (optional)</label>
+              <textarea id="team-info" name="team-info" rows="3"></textarea>
+            </div>
+
+            <div>
+              <p id="beta-obligations">
+                Beta members commit to weekly check-ins during the three-month
+                pilot period.
+              </p>
+              <label for="beta-check">
+                <input
+                  id="beta-check"
+                  type="checkbox"
+                  name="beta-check"
+                  aria-describedby="beta-obligations"
+                  required
+                />
+                I understand the beta obligations
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit">Reserve beta seat</button>
+        </form>
       </section>
     </main>
 
