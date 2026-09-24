@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FocusOrb — Focus & Productivity</title>
+    <title>FocusOrb · Gentle productivity rituals</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -16,76 +17,80 @@
     </header>
 
     <main>
-      <!-- 1. Hero Section -->
-      <section aria-labelledby="hero-title">
-        <h1 id="hero-title">Focus & alignment for high-velocity teams</h1>
+      <section id="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">
+          Replace pings with focus sessions your team actually follows
+        </h1>
         <p>
-          FocusOrb replaces status meetings and endless pinging with structured
-          daily logs and automated weekly reports.
+          FocusOrb gives small tech teams a shared rhythm: timed focus blocks, a
+          daily log, and an automated weekly report that replaces the mid-sprint
+          status meeting.
         </p>
-        <p>Built for remote teams who value deep work over constant updates.</p>
-        <a href="#waitlist">Get early access</a>
+        <p>
+          Built for teams of two to twelve. No enterprise contracts, no setup
+          calls.
+        </p>
+        <a class="cta" href="#waitlist">Join the beta waitlist</a>
       </section>
 
-      <!-- 2. Features Section -->
-      <section aria-labelledby="features-title">
-        <h2 id="features-title">Designed for deep work</h2>
+      <section id="features" aria-labelledby="features-title">
+        <h2 id="features-title">What FocusOrb does</h2>
 
-        <article>
-          <h3>Focus Timer</h3>
+        <article class="feature-card">
+          <h3>Focus timer</h3>
           <p>
-            Track your uninterrupted focus blocks without leaving your workflow.
+            Start a timed block and share your intention with the team. Everyone
+            sees who is in a focus session without sending a message.
           </p>
         </article>
 
-        <article>
-          <h3>Daily Log</h3>
+        <article class="feature-card">
+          <h3>Daily log</h3>
           <p>
-            Capture key achievements and blockers in two minutes at the end of
-            every day.
+            A short end-of-day form captures what shipped and what is blocked.
+            Takes under two minutes.
           </p>
         </article>
 
-        <article>
-          <h3>Weekly Report</h3>
+        <article class="feature-card">
+          <h3>Weekly report</h3>
           <p>
-            Automate progress summaries for leadership and board updates
-            effortlessly.
+            FocusOrb compiles the logs into a readable summary sent
+            automatically every Friday. Stakeholders stay informed without a
+            meeting.
           </p>
         </article>
       </section>
 
-      <!-- 3. Testimonials Section -->
-      <section aria-labelledby="voices-title">
+      <section id="testimonials" aria-labelledby="voices-title">
         <h2 id="voices-title">What early users say</h2>
 
-        <blockquote>
+        <blockquote class="testimonial">
           <p>
-            "Our weekly standups shrank from 45 minutes to 10 once everyone had
-            a shared focus log."
+            Our weekly standups shrank from 45 minutes to 10 once everyone had a
+            shared focus log.
           </p>
           <cite>Zara, climate marketplace founder</cite>
         </blockquote>
 
-        <blockquote>
+        <blockquote class="testimonial">
           <p>
-            "Investors stopped asking for status decks mid-sprint. The weekly
-            report handled it."
+            Investors stopped asking for status decks mid-sprint. The weekly
+            report handled it.
           </p>
           <cite>Noah, AI ops lead</cite>
         </blockquote>
 
-        <blockquote>
+        <blockquote class="testimonial">
           <p>
-            "Three months in, meeting debt is down 40%. That is the only metric
-            the board cares about."
+            Three months in, meeting debt is down 40%. That is the only metric
+            the board cares about.
           </p>
           <cite>Mei, Head of Ops</cite>
         </blockquote>
       </section>
 
-      <!-- 4. Pricing Section -->
-      <section aria-labelledby="pricing-title">
+      <section id="pricing" aria-labelledby="pricing-title">
         <h2 id="pricing-title">Simple pricing</h2>
 
         <dl>
@@ -102,7 +107,6 @@
         </dl>
       </section>
 
-      <!-- 5. Waitlist Section (Form) -->
       <section id="waitlist" aria-labelledby="waitlist-title">
         <h2 id="waitlist-title">Join the beta waitlist</h2>
 
@@ -110,60 +114,49 @@
           <fieldset>
             <legend>Your details</legend>
 
-            <div>
-              <label for="fullname">Full name</label>
+            <label for="fullname">Full name</label>
+            <input
+              id="fullname"
+              name="fullname"
+              type="text"
+              autocomplete="name"
+              required
+            />
+
+            <label for="email">Work email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="role">Your role</label>
+            <select id="role" name="role" required>
+              <option value="">Select a role</option>
+              <option value="founder">Founder</option>
+              <option value="operator">Operator</option>
+              <option value="engineer">Engineer</option>
+              <option value="designer">Designer</option>
+            </select>
+
+            <label for="message">Tell us about your team (optional)</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+
+            <p id="beta-info">
+              Beta participants commit to weekly check-ins and honest feedback
+              during the three-month pilot.
+            </p>
+            <label class="consent">
               <input
-                id="fullname"
-                type="text"
-                name="fullname"
-                autocomplete="name"
+                type="checkbox"
+                name="beta_ack"
+                aria-describedby="beta-info"
                 required
               />
-            </div>
-
-            <div>
-              <label for="email">Work email</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                autocomplete="email"
-                required
-              />
-            </div>
-
-            <div>
-              <label for="role">Your role</label>
-              <select id="role" name="role" required>
-                <option value="">Select a role</option>
-                <option value="founder">Founder</option>
-                <option value="operator">Operator</option>
-                <option value="engineer">Engineer</option>
-                <option value="designer">Designer</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="team-info">Tell us about your team (optional)</label>
-              <textarea id="team-info" name="team-info" rows="3"></textarea>
-            </div>
-
-            <div>
-              <p id="beta-obligations">
-                Beta members commit to weekly check-ins during the three-month
-                pilot period.
-              </p>
-              <label for="beta-check">
-                <input
-                  id="beta-check"
-                  type="checkbox"
-                  name="beta-check"
-                  aria-describedby="beta-obligations"
-                  required
-                />
-                I understand the beta obligations
-              </label>
-            </div>
+              I understand the beta obligations.
+            </label>
           </fieldset>
 
           <button type="submit">Reserve beta seat</button>
