@@ -320,3 +320,52 @@ dt {
 dd {
   margin-bottom: 0;
 }
+/* ==========================================================================
+   ADAPTATION MOBILE (MEDIA QUERY - MAX-WIDTH: 768PX)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* 1. En-tête : passage en pile verticale et centrage */
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  header nav {
+    gap: 1rem;
+  }
+
+  /* 2. Fonctionnalités : passage à 1 seule colonne */
+  #features {
+    grid-template-columns: 1fr;
+  }
+
+  /* 3. Témoignages : empilement vertical des cartes */
+  #testimonials {
+    flex-direction: column;
+  }
+
+  .testimonial {
+    width: 100%;
+  }
+
+  /* 4. Tarifs : la clé (dt) passe au-dessus de la description (dd) */
+  #pricing dl {
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+  }
+
+  dt {
+    margin-top: 1rem;
+  }
+
+  /* 5. Formulaire : tous les champs prennent 100% de la largeur */
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea,
+  button[type="submit"] {
+    width: 100%;
+  }
+}
